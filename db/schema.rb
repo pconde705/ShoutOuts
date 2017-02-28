@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170228094024) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string   "content"
     t.boolean  "is_shoutout"
     t.boolean  "is_antishoutout"
     t.integer  "school_id"
