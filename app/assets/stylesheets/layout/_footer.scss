@@ -3,9 +3,18 @@
 }
 
 .footer {
+  background-color: black;
   position: relative;
   right: 0;
   left: 0;
   bottom: 0;
   padding: 1rem;
+}
+
+.footer-social a {
+  color: white;
+}
+
+.name {
+  color: white;
 }
