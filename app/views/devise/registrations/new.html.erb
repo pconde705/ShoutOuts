@@ -13,7 +13,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :school_id, required: true, collection: School.order(:name) %>
+    <%= f.collection_select :school_id, School.order(:name), :id, :name, required: true, include_blank: true %>
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
