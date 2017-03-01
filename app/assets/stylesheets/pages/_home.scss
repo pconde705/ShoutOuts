@@ -1,12 +1,13 @@
 .banner {
   color: white;
   text-align: center;
-  height: 100vh;
+  //height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 25px;
 }
 
 .banner h1 {
@@ -22,12 +23,59 @@
   margin-bottom: 20px;
 }
 
+.headline {
+  padding-top: 300px;
+}
+
 .form-center {
   text-align: center;
 }
 
-.dropdown {
+.dropdown_home {
+  text-align: center;
   font-weight: lighter;
   color: black;
-  width: 400px;
+  max-width: 300px;
 }
+
+.media-aside {
+  flex: 0 0 400px;
+  padding: 30px;
+  align-self: stretch;
+
+  background-image: linear-gradient(to bottom,black,black);
+  opacity: .3;
+}
+
+.media-section {
+  margin: -10px auto;
+  max-width: 260px;
+  min-width: 319px;
+  margin-top: 20px;
+  padding-top: 1px;
+}
+
+.post-section-1 {
+  background-color: #FDFCFF;
+  padding: 10px;
+}
+
+.gray-border {
+  border: 1px solid #404040;
+}
+
+.post-section-2 {
+  background-color: #FDFCFF;
+  padding: 10px 30px;
+  margin: 20px 0px;
+}
+
+body {
+  background-color: #F5F8FA;
+}
+
+.school-name {
+  margin-top: 71px;
+  padding: 16px 0px;
+}
+

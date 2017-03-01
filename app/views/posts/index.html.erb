@@ -1,11 +1,15 @@
-<div class="bootrap">
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4">
-    <h1><%= current_user.school.name %></h1>
+  <div class="container">
+    <div class="row col-xs-12 col-md-8 col-md-offset-2">
+      <div class="school-name text-center">
+        <h1><%= current_user.school.name %></h1>
+      </div>
+    </div>
+    <div class="row col-xs-12 col-md-8 col-md-offset-2">
 
-      <h2>Type Your Shoutout</h2>
+      <div class="post-section-1 gray-border">
+        <h2>Type Your Shoutout</h2>
 
-      <%= simple_form_for(@post) do |f| %>
+        <%= simple_form_for(@post) do |f| %>
         <%= f.error_notification %>
 
         <%= f.input :content, as: :text %>
@@ -13,18 +17,19 @@
         <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
 
         <%= f.button :submit %>
-      <% end %>
-  <hr>
-      <% @posts.each do |post| %>
-      <div>
-      <p><%= post.id %></p>
-      <p><%= post.content %></p>
-      <p><%= post.created_at %></p>
-      <button>Like</button>
-      <button>Flag</button>
-      <hr>
+        <% end %>
+
       </div>
-      <% end %>
+    </div>
+    <div class="row col-xs-12 col-md-8 col-md-offset-2">
+          <% @posts.each do |post| %>
+            <div class="post-section-2 gray-border">
+              <p><%= post.id %></p>
+              <p><%= post.content %></p>
+              <p><%= post.created_at %></p>
+              <button>Like</button>
+              <button>Flag</button>
+              </div>
+          <% end %>
     </div>
   </div>
-</div>
