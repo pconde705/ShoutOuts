@@ -11,9 +11,10 @@
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
-
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
+
         <div class="dropdown">
           <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
