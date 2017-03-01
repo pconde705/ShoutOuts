@@ -17,13 +17,19 @@
   <hr>
       <% @posts.each do |post| %>
       <div>
-      <p><%= post.id %></p>
-      <p><%= post.content %></p>
-      <p><%= post.created_at %></p>
-      <button>Like</button>
-      <button>Flag</button>
-      <hr>
-      </div>
+        <% if post.flags.empty? %>
+          <p><%= post.id %></p>
+          <p><%= post.content %></p>
+          <p><%= post.created_at %></p>
+          <p><%= post.likes.count %> likes</p>
+          <%= link_to "Like", likes_path(post_id: post.id), method: :post %>
+          <%= link_to "Flag", flags_path(post_id: post.id), method: :post %>
+          <hr>
+        <% else %>
+          <p>This post is temporarily flagged</p>
+          <hr>
+        <% end %>
+        </div>
       <% end %>
     </div>
   </div>
