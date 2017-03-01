@@ -27,9 +27,17 @@
           <p><%= post.id %></p>
           <p><%= post.content %></p>
           <p><%= post.created_at %></p>
-          <p><%= post.likes.count %> likes</p>
-          <%= link_to "Like", likes_path(post_id: post.id), method: :post %>
-          <%= link_to "Flag", flags_path(post_id: post.id), method: :post %>
+
+          <div class="row post-fontawesome">
+            <%= link_to likes_path(post_id: post.id), method: :post do %>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <%= post.likes.count %>
+            <% end %>
+              <%= link_to flags_path(post_id: post.id), method: :post do %>
+                <i class="fa fa-flag" aria-hidden="true"></i>
+              <% end %>
+
+          </div>
         <% else %>
           <p>This post is temporarily flagged</p>
         <% end %>
