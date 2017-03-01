@@ -12,6 +12,14 @@ ActiveAdmin.register School do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-permit_params :name, :email_domain_name
+permit_params :name, :email_domain_name, :logo
+
+form do |f|
+  f.input :name
+  f.input :email_domain_name
+  f.input :logo, as: :formtastic_attachinary
+
+  f.button :submit
+end
 
 end
