@@ -4,28 +4,33 @@ class Post < ApplicationRecord
 
   belongs_to :school
   belongs_to :user
-  has_many :likes
-  has_many :flags
+  has_many :likes, dependent: :destroy
+  has_many :flags, dependent: :destroy
 
   validates :content, length: { minimum: 3, maximum: 150 }, presence: true, allow_blank: false
   validate :is_post_SO_or_ASO_or_both
 
 
   def define_SO_ASO
-    if content.include?("SO" || "shout-out")
-      self.is_shoutout = true
-    elsif content.include?("ASO" || "anti-shoutout")
+    if content.match(/^ASO|(ASO)/)
       self.is_antishoutout = true
-    elsif content.include?("SO" || "shout-out" && "ASO" || "anti-shoutout")
+    elsif content.match(/^SO|[^A](SO)/)
       self.is_shoutout = true
-      self.is_antishoutout = true
     end
   end
 
 
   def is_post_SO_or_ASO_or_both
     return if is_shoutout || is_antishoutout
-    errors.add(:content, "You must use either 'SO', 'ASO', 'shout-out', or 'anti-shoutout' somewhere in your post")
+    errors.add(:content, "You must use either 'SO' or 'ASO' somewhere in your post")
+  end
+
+  def number_of_likes
+    likes.count
+  end
+
+  def flagged?
+    flags.present?
   end
 
 end

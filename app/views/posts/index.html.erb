@@ -17,19 +17,23 @@
         <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
 
         <%= f.button :submit %>
-        <% end %>
-
+      <% end %>
       </div>
-    </div>
+  </div>
     <div class="row col-xs-12 col-md-8 col-md-offset-2">
-          <% @posts.each do |post| %>
-            <div class="post-section-2 gray-border">
-              <p><%= post.id %></p>
-              <p><%= post.content %></p>
-              <p><%= post.created_at %></p>
-              <button>Like</button>
-              <button>Flag</button>
-              </div>
-          <% end %>
+    <% @posts.each do |post| %>
+      <div class="post-section-2 gray-border">
+        <% if post.flags.empty? %>
+          <p><%= post.id %></p>
+          <p><%= post.content %></p>
+          <p><%= post.created_at %></p>
+          <p><%= post.likes.count %> likes</p>
+          <%= link_to "Like", likes_path(post_id: post.id), method: :post %>
+          <%= link_to "Flag", flags_path(post_id: post.id), method: :post %>
+        <% else %>
+          <p>This post is temporarily flagged</p>
+        <% end %>
+        </div>
+      <% end %>
     </div>
   </div>

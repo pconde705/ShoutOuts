@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   resources :posts, only: [ :index, :new, :create ]
+  resources :likes, only: [ :create ]
+  resources :flags, only: [ :create ]
 
   mount Attachinary::Engine => "/attachinary"
 

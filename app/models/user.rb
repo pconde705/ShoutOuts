@@ -9,8 +9,9 @@ class User < ApplicationRecord
 
   validate :check_email_for_chosen_school
 
-  has_many :posts
-  has_many :likes
+  has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :flags, dependent: :destroy
   belongs_to :school
 
   def check_email_for_chosen_school
