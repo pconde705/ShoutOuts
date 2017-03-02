@@ -15,4 +15,7 @@ ActiveAdmin.register User do
 
 permit_params :email, :created_at, :updated_at, :school_id, :is_admin
 
+  form do |f|
+
+  end
 end

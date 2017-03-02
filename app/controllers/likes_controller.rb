@@ -2,6 +2,6 @@ class LikesController < ApplicationController
 
   def create
     current_user.likes.create(post_id: params[:post_id])
-    redirect_to posts_path
+    @post = Post.find(params[:post_id])
   end
 end

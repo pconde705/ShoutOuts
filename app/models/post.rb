@@ -11,6 +11,7 @@ class Post < ApplicationRecord
   validate :is_post_SO_or_ASO_or_both
 
 
+
   def define_SO_ASO
     if content.match(/^ASO|(ASO)/)
       self.is_antishoutout = true
@@ -32,5 +33,6 @@ class Post < ApplicationRecord
   def flagged?
     flags.present?
   end
+
 
 end

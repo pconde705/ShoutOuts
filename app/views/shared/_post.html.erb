@@ -1,0 +1,25 @@
+<div class="post-section-2 gray-border">
+<span data-flag-post-id="<%= post.id %>">
+  <% if post.flags.empty? %>
+    <p><%= post.id %></p>
+    <p><%= post.content %></p>
+    <p><%= post.created_at %></p>
+
+    <div class="row post-fontawesome">
+      <%= link_to likes_path(post_id: post.id), method: :post, remote: true do %>
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <span data-post-id="<%= post.id %>">
+        <%= post.likes.count %>
+        </span>
+      <% end %>
+      <%= link_to flags_path(post_id: post.id), method: :post, remote: true do %>
+        <i class="fa fa-flag" aria-hidden="true"></i>
+      <% end %>
+    </div>
+
+  <% else %>
+
+    <p>This post is temporarily flagged</p>
+  <% end %>
+</span>
+</div>
