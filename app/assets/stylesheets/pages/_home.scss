@@ -24,7 +24,7 @@
 }
 
 .headline {
-  padding-top: 300px;
+  padding-top: 200px;
 }
 
 .form-center {
@@ -36,15 +36,14 @@
   font-weight: lighter;
   color: black;
   max-width: 300px;
+  margin-bottom: 17px;
 }
 
 .media-aside {
   flex: 0 0 400px;
   padding: 30px;
   align-self: stretch;
-
-  background-image: linear-gradient(to bottom,black,black);
-  opacity: .3;
+  background-color: rgba(0,0,0,0.3);
 }
 
 .media-section {
@@ -92,3 +91,29 @@ body {
   color: rgb(71, 42, 71)
 }
 
+.alignright {
+  float: right;
+}
+
+.dropdown-toggle {
+  color: white;
+}
+
+.signup-inputs input{
+  height: 25px;
+  border-radius: 3px;
+}
+
+.login-inputs input{
+  height: 25px;
+  border-radius: 3px;
+}
+
+.forget-link :hover {
+  text-decoration: none !important;
+  color: white;
+}
+
+.forget-link a {
+  color: white;
+}
