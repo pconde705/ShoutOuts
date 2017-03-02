@@ -3,4 +3,6 @@ class Flag < ApplicationRecord
   belongs_to :post
 
   validates :user_id, uniqueness: { scope: :post }
+
+
 end
