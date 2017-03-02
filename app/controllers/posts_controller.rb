@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
 
-
   def index
     @posts = current_user.school.posts.order("id DESC")
     @post = current_user.posts.new

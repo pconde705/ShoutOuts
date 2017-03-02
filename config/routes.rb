@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :likes, only: [ :create ]
   resources :flags, only: [ :create ]
 
+  get '/about' => 'pages#about', as: 'about'
+
   mount Attachinary::Engine => "/attachinary"
 
   devise_for :users, controllers: {registrations: "users/registrations"}

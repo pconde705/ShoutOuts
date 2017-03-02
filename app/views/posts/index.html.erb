@@ -1,8 +1,8 @@
   <div class="container">
     <div class="row col-xs-12 col-md-8 col-md-offset-2">
       <div class="school-name text-center">
-      <%= cl_image_tag current_user.school.logo.path %>
-        <h1><%= current_user.school.name %></h1>
+      <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit if current_user.school.logo.present?%>
+
       </div>
     </div>
     <div class="row col-xs-12 col-md-8 col-md-offset-2">
@@ -22,6 +22,7 @@
       </div>
   </div>
     <div class="row col-xs-12 col-md-8 col-md-offset-2">
+
       <div id="new_post">
 
       </div>
