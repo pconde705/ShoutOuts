@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  permit_params :content, :is_shoutout, :is_antishoutout, :school_id, :user_id, :created_at, :updated_at
+  permit_params :content, :is_shoutout, :is_antishoutout, :school_id, :user_id, :created_at, :updated_at, :flagged?
 
 
   index do
@@ -14,15 +14,13 @@ ActiveAdmin.register Post do
     actions
   end
 
-  # form do |f|
-  #   f.inputs 'Details' do
-  #     # f.input :school_id
-  #     # f.input :user_id
-  #     f.input :content
-  #     f.input :is_shoutout
-  #     f.input :is_antishoutout
-  #     f.input :flagged?
-  #     f.actions
-  #   end
-  # end
+  form do |f|
+    f.input :school
+    f.input :user
+    f.input :content
+    f.input :is_shoutout
+    f.input :is_antishoutout
+    f.input :flagged?
+    f.actions
+  end
 end
