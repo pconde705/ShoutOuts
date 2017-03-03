@@ -39,6 +39,8 @@
   margin-bottom: 17px;
 }
 
+
+
 .media-aside {
   flex: 0 0 400px;
   padding: 30px;
@@ -55,16 +57,16 @@
 }
 
 .post-section-1 {
-  background-color: #FDFCFF;
+  background-color: white;
   padding: 10px;
 }
 
 .gray-border {
-  border: 1px solid #404040;
+  border: 1px solid #D8D5E0;
 }
 
 .post-section-2 {
-  background-color: #FDFCFF;
+  background-color: white;
   padding: 10px 30px;
   margin: 20px 0px;
 }
@@ -79,7 +81,7 @@ body {
 }
 
 .post-fontawesome {
-  margin: 7px;
+  margin: 1px;
 }
 
 .post-fontawesome :hover {
@@ -89,6 +91,14 @@ body {
 
 .post-fontawesome a{
   color: rgb(71, 42, 71)
+}
+
+.id-badge {
+  color: #49484C;
+}
+
+.badge {
+  color: red;
 }
 
 .alignright {
@@ -135,4 +145,12 @@ body {
 .main-content {
   font-size: 30px;
 }
+.heart-stuff, .heart-stuff:hover, .heart-stuff:active, .heart-stuff:visited {
+   text-decoration: none;
+}
+
+hr {
+  margin: auto;
+}
+
 
