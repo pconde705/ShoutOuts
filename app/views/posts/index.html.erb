@@ -24,24 +24,23 @@
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All</a></li>
-      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">SO</a></li>
-      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">ASO</a></li>
+      <li role="presentation" class=<%= 'active' if params[:index_type].nil? %>>
+        <%= link_to "ALL", posts_path, role: "tab" %>
+      </li>
+      <li role="presentation" class=<%= 'active' if params[:index_type] == 'SO' %>>
+        <%= link_to "SO", posts_path(index_type: 'SO'), role: "tab" %>
+      </li>
+      <li role="presentation" class=<%= 'active' if params[:index_type] == 'ASO'%>>
+        <%= link_to "ASO", posts_path(index_type: 'ASO'), role: "tab" %>
+      </li>
     </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="home">
-        <div id="new_post">
-        </div>
-        <% @posts.each do |post| %>
-          <%= render 'shared/post', post: post %>
-
-        <% end %>
-
-      </div>
-      <div role="tabpanel" class="tab-pane" id="profile">...</div>
-      <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    <div id="new_post">
     </div>
+
+    <% @posts.each do |post| %>
+      <%= render 'shared/post', post: post %>
+    <% end %>
   </div>
 </div>
+
