@@ -1,39 +1,46 @@
-  <div class="container">
-    <div class="row col-xs-12 col-md-8 col-md-offset-2">
-      <div class="school-name text-center">
-      <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit if current_user.school.logo.present?%>
-
-      </div>
+<div class="container">
+  <div class="row col-xs-12 col-md-8 col-md-offset-2">
+    <div class="school-name text-center">
+      <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit if current_user.school.logo.present? %>
     </div>
-    <div class="row col-xs-12 col-md-8 col-md-offset-2">
+  </div>
+  <div class="row col-xs-12 col-md-8 col-md-offset-2">
 
-      <div class="post-section-1 gray-border ">
-        <h2>Type Your Shoutout</h2>
+    <div class="post-section-1 gray-border ">
+      <h2>Type Your Shoutout</h2>
 
-        <%= simple_form_for(@post, remote: true, html: { id: "post_form"}) do |f| %>
-        <%= f.error_notification %>
+      <%= simple_form_for(@post, remote: true, html: { id: "post_form"}) do |f| %>
+      <%= f.error_notification %>
 
-        <%= f.input :content, as: :text %>
+      <%= f.input :content, as: :text %>
 
-        <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
+      <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
 
-        <%= f.button :submit %>
-      <% end %>
-      </div>
-    </div>
-
-    <div class="row col-xs-12 col-md-8 col-md-offset-2">
-
-      <%= link_to 'ALL', posts_path %>
-      <%= link_to "SO", posts_path(index_type: 'SO') %>
-      <%= link_to "ASO", posts_path(index_type: 'ASO') %>
-      <div id="new_post">
-
-      </div>
-    <% @posts.each do |post| %>
-      <%= render 'shared/post', post: post %>
+      <%= f.button :submit %>
       <% end %>
     </div>
   </div>
+  <div class="row col-xs-12 col-md-8 col-md-offset-2">
 
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li role="presentation" class=<%= 'active' if params[:index_type].nil? %>>
+        <%= link_to "ALL", posts_path, role: "tab" %>
+      </li>
+      <li role="presentation" class=<%= 'active' if params[:index_type] == 'SO' %>>
+        <%= link_to "SO", posts_path(index_type: 'SO'), role: "tab" %>
+      </li>
+      <li role="presentation" class=<%= 'active' if params[:index_type] == 'ASO'%>>
+        <%= link_to "ASO", posts_path(index_type: 'ASO'), role: "tab" %>
+      </li>
+    </ul>
+
+    <div id="new_post">
+    </div>
+
+    <% @posts.each do |post| %>
+      <%= render 'shared/post', post: post %>
+    <% end %>
+  </div>
+</div>
 

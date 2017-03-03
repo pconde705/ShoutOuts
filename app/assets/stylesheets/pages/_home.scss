@@ -104,6 +104,10 @@ body {
   border-radius: 3px;
 }
 
+.signup-label input {
+  font-size: 10em;
+}
+
 .login-inputs input{
   height: 25px;
   border-radius: 3px;
@@ -116,8 +120,19 @@ body {
 
 .forget-link a {
   color: white;
+  text-decoration: none !important;
+}
+
+.nav-tabs {
+  padding-top: 20px;
+}
+
+.nav-tabs a {
+  color: black;
+  text-decoration: none !important;
 }
 
 .main-content {
   font-size: 30px;
 }
+

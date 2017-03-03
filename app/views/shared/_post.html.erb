@@ -6,8 +6,9 @@
 
     <div class="row post-fontawesome">
       <%= link_to likes_path(post_id: post.id), method: :post, remote: true do %>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-        <span data-post-id="<%= post.id %>">
+
+        <i class="fa fa-heart-o" aria-hidden="true"></i>
+        <span class="likes-count" data-post-id="<%= post.id %>">
         <%= post.likes.count %>
         </span>
       <% end %>
