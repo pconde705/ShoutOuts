@@ -20,9 +20,13 @@
         <%= f.button :submit %>
       <% end %>
       </div>
-  </div>
+    </div>
+
     <div class="row col-xs-12 col-md-8 col-md-offset-2">
 
+      <%= link_to 'ALL', posts_path %>
+      <%= link_to "SO", posts_path(index_type: 'SO') %>
+      <%= link_to "ASO", posts_path(index_type: 'ASO') %>
       <div id="new_post">
 
       </div>
@@ -31,3 +35,5 @@
       <% end %>
     </div>
   </div>
+
+

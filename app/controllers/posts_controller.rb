@@ -1,10 +1,16 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = current_user.school.posts.order("id DESC")
+    type = params[:index_type]
+    school = current_user.school
     @post = current_user.posts.new
-    # @posts = Post.order("id DESC")
-    # @post = Post.new
+    @posts = if type == 'SO'
+      school.posts.where(is_shoutout: true).order("id DESC")
+      elsif type == 'ASO'
+        school.posts.where(is_antishoutout: true).order("id DESC")
+      else
+        school.posts.order("id DESC")
+      end
   end
 
   def create
