@@ -1,8 +1,8 @@
 <div class="post-section-2 gray-border">
 <span data-flag-post-id="<%= post.id %>">
   <% if post.flags.empty? %>
-    <p><%= post.id %> <i class="fa fa-id-badge" aria-hidden="true"></i> <%= post.created_at %></p>
-    <p><%= post.content %></p>
+    <p>#<%= post.id %> <i class="fa fa-id-badge" aria-hidden="true"></i> <%= post.created_at.strftime("%A - %b %m, %Y | %I:%M %p ") %></p>
+    <p class="main-content"><%= post.content %></p>
 
     <div class="row post-fontawesome">
       <%= link_to likes_path(post_id: post.id), method: :post, remote: true do %>
