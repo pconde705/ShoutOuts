@@ -1,33 +1,47 @@
-  <div class="container">
-    <div class="row col-xs-12 col-md-8 col-md-offset-2">
-      <div class="school-name text-center">
-      <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit if current_user.school.logo.present?%>
-
-      </div>
+<div class="container">
+  <div class="row col-xs-12 col-md-8 col-md-offset-2">
+    <div class="school-name text-center">
+      <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit if current_user.school.logo.present? %>
     </div>
-    <div class="row col-xs-12 col-md-8 col-md-offset-2">
-
-      <div class="post-section-1 gray-border ">
-        <h2>Type Your Shoutout</h2>
-
-        <%= simple_form_for(@post, remote: true, html: { id: "post_form"}) do |f| %>
-        <%= f.error_notification %>
-
-        <%= f.input :content, as: :text %>
-
-        <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
-
-        <%= f.button :submit %>
-      <% end %>
-      </div>
   </div>
-    <div class="row col-xs-12 col-md-8 col-md-offset-2">
+  <div class="row col-xs-12 col-md-8 col-md-offset-2">
 
-      <div id="new_post">
+    <div class="post-section-1 gray-border ">
+      <h2>Type Your Shoutout</h2>
 
-      </div>
-    <% @posts.each do |post| %>
-      <%= render 'shared/post', post: post %>
+      <%= simple_form_for(@post, remote: true, html: { id: "post_form"}) do |f| %>
+      <%= f.error_notification %>
+
+      <%= f.input :content, as: :text %>
+
+      <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
+
+      <%= f.button :submit %>
       <% end %>
     </div>
   </div>
+  <div class="row col-xs-12 col-md-8 col-md-offset-2">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">All</a></li>
+      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">SO</a></li>
+      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">ASO</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div id="new_post">
+        </div>
+        <% @posts.each do |post| %>
+          <%= render 'shared/post', post: post %>
+
+        <% end %>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="profile">...</div>
+      <div role="tabpanel" class="tab-pane" id="messages">...</div>
+    </div>
+  </div>
+</div>

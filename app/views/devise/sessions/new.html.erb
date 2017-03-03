@@ -10,18 +10,18 @@
           <h2>Get a live feed of what people are saying in your local community.</h2>
         </div>
       </div>
-<br>
       <div class="row col-xs-12 col-md-4">
         <div class= "media-aside media-section">
+
           <h2>Sign up</h2>
 
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= f.error_notification %>
             <div class="form-inputs form-center signup-inputs">
               <%= f.collection_select :school_id, School.order(:name), :id, :name, {required: true, include_blank: true}, { class: 'dropdown_home'} %>
-              <%= f.input :email, required: true, autofocus: true, label: false,placeholder: "Email" %>
-              <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: false,placeholder: "Password 6 characters min" %>
-              <%= f.input :password_confirmation, required: true, label: false,placeholder: "Password confirmation" %>
+              <%= f.input :email, required: true, autofocus: true %>
+              <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), placeholder: "6 characters min" %>
+              <%= f.input :password_confirmation, required: true, placeholder: "6 characters min"  %>
             </div>
 
             <div class="form-actions">
@@ -37,8 +37,8 @@
 
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs login-inputs">
-              <%= f.input :email, required: false, autofocus: true, label: false,placeholder: "Email" %>
-              <%= f.input :password, required: false, label: false,placeholder: "Password" %>
+              <%= f.input :email, required: false, autofocus: true %>
+              <%= f.input :password, required: false, placeholder: "6 characters min"  %>
               <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
             </div>
 
@@ -46,6 +46,7 @@
               <%= f.button :submit, "Log in" %>
             </div>
           <% end %>
+          <br>
           <div class="forget-link">
             <%= render "devise/shared/links" %>
           </div>
@@ -53,10 +54,6 @@
       </div>
 
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
   </div>
 </div>
 
