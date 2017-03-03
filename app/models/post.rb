@@ -25,7 +25,7 @@ class Post < ApplicationRecord
 
 
   def is_post_SO_or_ASO_or_both
-    return if is_shoutout || is_antishoutout
+    return if self.is_shoutout || self.is_antishoutout
     errors.add(:content, "You must use either 'SO' or 'ASO' somewhere in your post")
   end
 

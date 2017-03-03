@@ -8,10 +8,21 @@
 <hr>
     <div class="row post-fontawesome">
       <%= link_to likes_path(post_id: post.id), method: :post, remote: true, class: "heart-stuff" do %>
+        <% if post.likes.count < 1 %>
+        <span heart-post-id="<%= post.id %>">
         <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </span>
         <span data-post-id="<%= post.id %>">
           <%= post.likes.count %>
         </span>
+        <% else %>
+        <span heart-post-id="<%= post.id %>">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        </span>
+        <span data-post-id="<%= post.id %>">
+          <%= post.likes.count %>
+        </span>
+        <% end %>
       <% end %>
       <%= link_to flags_path(post_id: post.id), method: :post, remote: true do %>
         <i class="fa fa-flag alignright" aria-hidden="true"></i>
