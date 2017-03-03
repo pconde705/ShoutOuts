@@ -39,7 +39,29 @@
   margin-bottom: 17px;
 }
 
+.search-form {
+  input {
+    border-right: none;
+    box-shadow: none;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    &:focus {
+      outline: none !important;
 
+    }
+  }
+  button {
+    border-left: none;
+    margin-left: -10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+}
 
 .media-aside {
   flex: 0 0 400px;
