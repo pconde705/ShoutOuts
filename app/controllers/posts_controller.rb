@@ -19,16 +19,12 @@ class PostsController < ApplicationController
     @post = current_user.posts.create(post_params)
     # @post = Post.new
     # @post.save
-    if @post.save
-      respond_to do |format|
-        format.html { redirect_to posts_path(@post) }
-        format.js  # <-- will render `app/views/reviews/create.js.erb`
+    respond_to do |format|
+      format.html do
+        flash[:alert] = 'Use SO or ASO tag somewhere in your post' if @post.errors.present?
+        redirect_to posts_path(@post)
       end
-    else
-      respond_to do |format|
-        format.html { render :index }
-        format.js  # <-- idem
-      end
+      format.js  # <-- will render `app/views/reviews/create.js.erb`
     end
   end
 
