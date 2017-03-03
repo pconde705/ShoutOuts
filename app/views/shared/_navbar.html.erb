@@ -11,7 +11,15 @@
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <!-- Searchform -->
+     <%= form_tag posts_path, class: "form-inline search-form", method: :get do %>
+       <input type="text" name="query" id="query" class="form-control" placeholder="Search content or id">
+       <button type="submit" class="btn btn-default">
+        <i class="fa fa-search" aria-hidden="true"></i>
+       </button>
+      <% end %>
+
+
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
 
