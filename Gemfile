@@ -22,6 +22,7 @@ gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'pg_search'
 
 group :development, :test do
   gem 'binding_of_caller'

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row col-xs-12 col-md-8 col-md-offset-2">
     <div class="school-name text-center">
-      <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit if current_user.school.logo.present? %>
+      <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit, class: "pic-width" if current_user.school.logo.present? %>
     </div>
   </div>
   <div class="row col-xs-12 col-md-8 col-md-offset-2">
@@ -22,6 +22,10 @@
   </div>
   <div class="row col-xs-12 col-md-8 col-md-offset-2">
 
+  <%= form_tag posts_path, class: "form-inline", method: :get do %>
+      <input type="text" name="query" id="query" placeholder="content or id">
+      <input type="submit" name="commit" value="Search" class="btn btn-default">
+  <% end %>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class=<%= 'active' if params[:index_type].nil? %>>
