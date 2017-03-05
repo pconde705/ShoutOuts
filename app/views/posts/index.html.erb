@@ -4,7 +4,17 @@
       <%= cl_image_tag current_user.school.logo.path, width: 730, height: 200, crop: :fit, class: "pic-width" if current_user.school.logo.present? %>
     </div>
   </div>
+
   <div class="row col-xs-12 col-md-8 col-md-offset-2">
+    <!-- Searchform -->
+    <div class="hidden-lg visible-xs input-group mobile-search" style="margin-bottom: 20px">
+      <%= form_tag posts_path, class: "search-form", method: :get do %>
+        <input type="text" name="query" id="query" class="form-control" placeholder="Search content or id">
+        <button type="submit" class="btn btn-default">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      <% end %>
+    </div>
 
     <div class="post-section-1 gray-border ">
       <h2>Type Your Shoutout</h2>
