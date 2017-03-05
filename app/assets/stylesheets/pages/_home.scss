@@ -63,6 +63,12 @@
   }
 }
 
+.mobile-search {
+  input {
+    max-width: 90%;
+  }
+}
+
 .media-aside {
   flex: 0 0 400px;
   padding: 30px;
