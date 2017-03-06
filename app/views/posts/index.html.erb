@@ -7,13 +7,8 @@
 
   <div class="row col-xs-12 col-md-8 col-md-offset-2">
     <!-- Searchform -->
-    <div class="hidden-lg visible-xs input-group mobile-search" style="margin-bottom: 20px">
-      <%= form_tag posts_path, class: "search-form", method: :get do %>
-        <input type="text" name="query" id="query" class="form-control" placeholder="Search content or id">
-        <button type="submit" class="btn btn-default">
-        <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
-      <% end %>
+    <div class="hidden-lg visible-xs visible-sm input-group mobile-search">
+      <%= form_tag posts_path, class: "search-form", method: :get do %><input class="form-control" id="query" name="query" placeholder="Search content or id" type="text"> <button class="btn btn-default" type="submit"><i aria-hidden="true" class="fa fa-search"></i></button> <%end %>
     </div>
 
     <div class="post-section-1 gray-border">
@@ -21,30 +16,18 @@
       <div id="form-poster">
         <%= render 'form', post: @post %>
       </div>
-
     </div>
   </div>
+
   <div class="row col-xs-12 col-md-8 col-md-offset-2">
-
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class=<%= 'active' if params[:index_type].nil? %>>
-        <%= link_to "ALL", posts_path, role: "tab" %>
-      </li>
-      <li role="presentation" class=<%= 'active' if params[:index_type] == 'SO' %>>
-        <%= link_to "SO", posts_path(index_type: 'SO'), role: "tab" %>
-      </li>
-      <li role="presentation" class=<%= 'active' if params[:index_type] == 'ASO'%>>
-        <%= link_to "ASO", posts_path(index_type: 'ASO'), role: "tab" %>
-      </li>
-    </ul>
-
-    <div id="new_post">
+    <div id="tabs">
+      <%= render 'tabs' %>
     </div>
-
-    <% @posts.each do |post| %>
-      <%= render 'shared/post', post: post %>
-    <% end %>
+    <div id="new_post"></div>
+    <div id="posts">
+      <%= render 'posts' %>
+    </div>
   </div>
-</div>
 
+</div>

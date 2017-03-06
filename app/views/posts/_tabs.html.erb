@@ -1,0 +1,8 @@
+<ul class="nav nav-tabs nav-justified" role="tablist">
+  <li class="<%= 'active' if params[:index_type].nil? %>" role="presentation"><%= link_to "ALL", posts_path, role: "tab", remote: true %>
+  </li>
+  <li class="<%= 'active' if params[:index_type] == 'SO' %>" role="presentation"><%= link_to "SO", posts_path(index_type: 'SO'), role: "tab", remote: true %>
+  </li>
+  <li class="<%= 'active' if params[:index_type] == 'ASO'%>" role="presentation"><%= link_to "ASO", posts_path(index_type: 'ASO'), role: "tab", remote: true %>
+  </li>
+</ul>
