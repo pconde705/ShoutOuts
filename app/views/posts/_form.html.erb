@@ -1,9 +1,23 @@
 <%= simple_form_for(post, remote: true, html: { id: "post_form"}) do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :content, as: :text %>
+  <%= f.input :content, as: :text, placeholder: "Compose new SO or ASO..." %>
 
   <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
 
+  <div id="counter" class="counter">150</div>
+
   <%= f.button :submit %>
 <% end %>
+
+
+<script>
+$(document).ready(function() {
+  $("#post_content").keyup(function() {
+    var counter = $("#counter");
+    var charsRemaining = 150 - $(this).val().length;
+    counter.text(charsRemaining);
+    counter.css('color', (charsRemaining < 0) ? 'red' : 'black');
+  });
+});
+</script>

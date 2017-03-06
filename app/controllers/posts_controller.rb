@@ -13,6 +13,10 @@ class PostsController < ApplicationController
       else
         school.posts.order("id DESC")
     end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create

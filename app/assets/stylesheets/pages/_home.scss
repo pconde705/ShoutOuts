@@ -65,8 +65,9 @@
 
 .mobile-search {
   input {
-    max-width: 90%;
+    max-width: 91%;
   }
+  margin-bottom: 20px
 }
 
 .media-aside {
@@ -184,5 +185,9 @@ hr {
 
 .pic-width {
   width: 100%
+}
+
+.counter {
+  float: right;
 }
 
