@@ -1,0 +1,9 @@
+<%= simple_form_for(post, remote: true, html: { id: "post_form"}) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :content, as: :text %>
+
+  <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
+
+  <%= f.button :submit %>
+<% end %>
