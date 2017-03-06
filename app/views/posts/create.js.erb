@@ -1,3 +1,7 @@
-$('#post_content').val('');
-$('#new_post').html("<%= j render(partial: 'shared/post', locals: { post: @post }) %>");
-
+<% if @post.errors.any? %>
+  // Render new review form with errors
+  $('#form-poster').html("<%= j render(partial: 'form', locals: {post: @post}) %>");
+<% else %>
+  $('#post_content').val('');
+  $('#new_post').html("<%= j render(partial: 'shared/post', locals: { post: @post }) %>");
+<% end %>

@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     # @post.save
     respond_to do |format|
       format.html do
-        flash[:alert] = 'Use SO or ASO tag somewhere in your post' if @post.errors.present?
+        flash[:alert] = @post.errors.full_messages if @post.errors.present?
         redirect_to posts_path(@post)
       end
       format.js  # <-- will render `app/views/reviews/create.js.erb`
