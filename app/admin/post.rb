@@ -1,5 +1,5 @@
 ActiveAdmin.register Post do
-  permit_params :content, :is_shoutout, :is_antishoutout, :school_id, :user_id, :created_at, :updated_at, :flagged?
+  permit_params :content, :is_shoutout, :is_antishoutout, :school_id, :user_id, :created_at, :updated_at, :approved
 
 
   index do
@@ -11,6 +11,7 @@ ActiveAdmin.register Post do
     column :number_of_likes
     column :flagged?
     column :created_at
+    column :approved
     actions
   end
 
@@ -20,7 +21,7 @@ ActiveAdmin.register Post do
     f.input :content
     f.input :is_shoutout
     f.input :is_antishoutout
-    f.input :flagged?
+    f.input :approved
     f.actions
   end
 end

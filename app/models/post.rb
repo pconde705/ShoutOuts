@@ -14,7 +14,6 @@ class Post < ApplicationRecord
   validate :is_post_SO_or_ASO_or_both
 
 
-
   def define_SO_ASO
     if content.match(/^ASO|(ASO)/)
       self.is_antishoutout = true
@@ -27,8 +26,6 @@ class Post < ApplicationRecord
   def is_post_SO_or_ASO_or_both
     return if self.is_shoutout || self.is_antishoutout
     errors.add(:content, "You must use either 'SO' or 'ASO' somewhere in your post")
-    p "THis is working?!"
-    p self.errors
   end
 
   def number_of_likes
