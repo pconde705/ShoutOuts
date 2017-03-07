@@ -5,3 +5,4 @@
 //= require attachinary
 //= require bootstrap-sprockets
 //= require init_attachinary
+//= require social-share-button

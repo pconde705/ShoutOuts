@@ -2,8 +2,9 @@
 <span data-flag-post-id="<%= post.id %>">
   <% if post.flags.empty? || post.approved %>
   <div class="id-badge">
-    <p>#<%= post.id %> <i class="fa fa-id-badge" aria-hidden="true"> </i> <%= post.created_at.strftime("%A - %b %m, %Y | %I:%M %p ") %></p>
-    </div>
+  <%= social_share_button_tag([post.id, post.content]) %>
+    <p><span class="the-id">#<%= post.id %></span> <i class="fa fa-calendar" aria-hidden="true"> </i> <span class="the-dates"><%= post.created_at.strftime("%A - %b %m, %Y | %I:%M %p ") %></span></p>
+  </div>
     <p class="main-content"><%= post.content %></p>
 <hr>
     <div class="row post-fontawesome">

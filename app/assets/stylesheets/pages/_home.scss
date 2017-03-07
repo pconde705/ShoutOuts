@@ -39,6 +39,7 @@
   margin-bottom: 17px;
 }
 
+
 .search-form {
   input {
     border-right: none;
@@ -97,11 +98,11 @@
 .post-section-2 {
   background-color: white;
   padding: 10px 30px;
-  margin: 20px 0px;
+  margin: 25px 0px;
 }
 
 body {
-  background-color: #F5F8FA;
+  background-color: #FAFAFC;
 }
 
 .school-name {
@@ -172,7 +173,9 @@ body {
 }
 
 .main-content {
-  font-size: 30px;
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+  padding: 6px 0px;
 }
 .heart-stuff, .heart-stuff:hover, .heart-stuff:active, .heart-stuff:visited {
    text-decoration: none;
@@ -189,5 +192,14 @@ hr {
 
 .counter {
   float: right;
+}
+
+.the-dates {
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.the-id {
+  font-weight: bolder;
 }
 
