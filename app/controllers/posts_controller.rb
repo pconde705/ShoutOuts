@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+
   def index
     type = params[:index_type]
     school = current_user.school
@@ -10,6 +11,8 @@ class PostsController < ApplicationController
         school.posts.where(is_shoutout: true).order("id DESC")
       elsif type == 'ASO'
         school.posts.where(is_antishoutout: true).order("id DESC")
+      elsif type == 'POP'
+        order_popularity
       else
         school.posts.order("id DESC")
     end
@@ -35,8 +38,11 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :school_id)
+    params.require(:post).permit(:content, :school_id, :likes_count)
   end
 
+  def order_popularity
+    @posts_per_like = Post.order(likes_count: :desc)
+  end
 
 end
