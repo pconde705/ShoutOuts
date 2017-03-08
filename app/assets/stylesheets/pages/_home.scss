@@ -203,3 +203,14 @@ hr {
   font-weight: bolder;
 }
 
+.post-btn {
+  border: 1px solid #693569;
+  color: RGBA(69, 4, 69);
+
+  font-size: 17px;
+}
+
+.post-btn:hover {
+  background-color: #FAFAFC;
+  border: 1px solid #693569;
+}
