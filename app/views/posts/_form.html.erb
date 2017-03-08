@@ -7,7 +7,10 @@
 
   <div id="counter" class="counter">150</div>
 
-  <%= f.button :submit %>
+<%= button_tag(type: 'submit', class: "btn btn-default post-btn") do %>
+    <%= image_tag "logo_black.png", size: "20x14" %> Post
+  <% end %>
+
 <% end %>
 
 
