@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   end
 
   def order_popularity
-    @posts_per_like = Post.order(likes_count: :desc)
+    @posts_per_like = current_user.school.posts.order(likes_count: :desc)
   end
 
 end
