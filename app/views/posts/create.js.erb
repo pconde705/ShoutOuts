@@ -5,3 +5,6 @@
   $('#post_content').val('');
   $('#new_post').html("<%= j render(partial: 'shared/post', locals: { post: @post }) %>");
 <% end %>
+$("#new_post").contents().prependTo("#posts");
+
+

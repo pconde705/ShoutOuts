@@ -27,11 +27,10 @@
       <% end %>
       <%= link_to flags_path(post_id: post.id), method: :post, remote: true do %>
         <i class="fa fa-flag alignright" aria-hidden="true"></i>
-      <% end %>
+      <% end unless post.approved %>
     </div>
-
   <% else %>
-    <p>This post is temporarily flagged</p>
+    <h5><em>This post is temporarily flagged -pending review</em></h5>
   <% end %>
 </span>
 </div>
