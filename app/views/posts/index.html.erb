@@ -6,14 +6,28 @@
   </div>
 
   <div class="row col-xs-12 col-md-8 col-md-offset-2">
+
     <!-- Searchform -->
     <div class="hidden-lg visible-xs visible-sm input-group mobile-search">
       <%= form_tag posts_path, class: "search-form", method: :get do %><input class="form-control" id="query" name="query" placeholder="Search content or id" type="text">
       <button class="btn btn-default" type="submit"><i aria-hidden="true" class="fa fa-search"></i></button> <%end %>
     </div>
 
-    <div class="post-section-1 gray-border" id="post-section">
-      <h3>Type your <strong>S</strong>hout-<strong>O</strong>ut or <strong>A</strong>nti-<strong>S</strong>hout<strong>O</strong>ut</h3>
+    <!-- MODAL -->
+    <div id="event-modal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>What's on your mind?</h3>
+            <%= render 'form', post: @post %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-section-1 purple-border">
+      <h3>What's on your mind?</h3>
+
       <div id="form-poster">
         <%= render 'form', post: @post %>
       </div>
@@ -32,3 +46,11 @@
   </div>
 
 </div>
+
+<script>
+  function openMadal() {
+    $('#event-modal').modal({
+      backdrop: true
+    });
+  }
+</script>
