@@ -13,18 +13,6 @@
       <button class="btn btn-default" type="submit"><i aria-hidden="true" class="fa fa-search"></i></button> <%end %>
     </div>
 
-    <!-- MODAL -->
-    <div id="event-modal" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <h3>What's on your mind?</h3>
-            <%= render 'form', post: @post %>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="post-section-1 purple-border">
       <h3>What's on your mind?</h3>
 
@@ -46,11 +34,3 @@
   </div>
 
 </div>
-
-<script>
-  function openMadal() {
-    $('#event-modal').modal({
-      backdrop: true
-    });
-  }
-</script>
