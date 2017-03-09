@@ -2,14 +2,14 @@
   <%= f.error_notification %>
 
 
-  <%= f.input :content, as: :text, placeholder: "Type Your Shout-Out or Anti-ShoutOut", label: false, input_html: {rows: 3, onclick: 'openMadal()'} %>
+  <%= f.input :content, as: :text, placeholder: "Type Your Shout-Out or Anti-ShoutOut", label: false, input_html: {rows: 3} %>
 
   <%= f.input :school_id, as: :hidden, input_html: { value: current_user.school_id } %>
 
   <div id="counter" class="counter">150</div>
 
-<%= button_tag(type: 'submit', class: "btn btn-default post-btn") do %>
-    <%= image_tag "logo_black.png", size: "20x14" %> Post
+<%= button_tag(type: 'submit', class: "btn btn-default post-btn btn-lg") do %>
+    <%= image_tag "logo_black.png", size: "22x16" %> Post
   <% end %>
 
 <% end %>
