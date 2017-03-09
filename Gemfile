@@ -24,6 +24,9 @@ gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'pg_search'
 gem 'social-share-button'
+gem 'gemoji'
+
+gem 'faker'
 
 group :development, :test do
   gem 'binding_of_caller'
