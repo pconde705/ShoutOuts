@@ -1,4 +1,4 @@
-<%= simple_form_for(post, remote: true, html: { id: "post_form"}) do |f| %>
+<%= simple_form_for(post, remote: true, html: { id: "post_form", onsubmit: "obscureBackground()"}) do |f| %>
   <%= f.error_notification %>
 
   <%= f.input :content, as: :text, placeholder: "Type Your Shout-Out or Anti-ShoutOut", label: false, input_html: {rows: 3, onclick: 'obscureBackground()'} %>
