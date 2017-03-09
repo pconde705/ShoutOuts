@@ -4,15 +4,16 @@
 
 .footer {
   background-color: RGBA(69, 4, 69, 0.8);
-  position: relative;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  height: 50px;
   padding-top: 10px;
-}
-
-.footer-social a {
-  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 10px;
+  margin-left: 0px;
+  z-index: 7;
 }
 
 .name {
