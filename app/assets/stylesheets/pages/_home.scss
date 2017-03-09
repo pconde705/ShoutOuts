@@ -71,7 +71,7 @@ html, body {
 
 .mobile-search {
   input {
-    max-width: 91%;
+    max-width: 88%;
   }
   margin-bottom: 10px;
   margin-top: 20px;
@@ -224,8 +224,10 @@ hr {
 }
 
 .post-btn:hover {
-  background-color: #FAFAFC;
+  background-color: #469AE0;
   border: 1px solid #693569;
+  color: white;
+  font-weight: bolder;
 }
 
 .form-size-empty {

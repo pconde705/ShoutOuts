@@ -10,21 +10,21 @@ require 'faker'
 # wisc = School.create(name: "University of Wisconsin-Madison", email_domain_name: "wisc.edu")
 # ccc = School.create(name: "Columbia College Chicago", email_domain_name: "colum.edu")
 
-# This is only for the Heroku seed, inflating likes
+# The bottom is only for the Heroku seed, inflating likes
 
-wisc = School.find_by(name: "University of Wisconsin-Madison")
+# wisc = School.find_by(name: "University of Wisconsin-Madison")
 
-100.times do
-  wisc.users.create(email: "#{Faker::Internet.user_name}@wisc.edu", password: Faker::Internet.password(8))
-end
+# 100.times do
+#   wisc.users.create(email: "#{Faker::Internet.user_name}@wisc.edu", password: Faker::Internet.password(8))
+# end
 
-def create_likes(post, number)
-  number.times do
-    post.likes.create(user: User.all.to_a.sample)
-  end
-end
+# def create_likes(post, number)
+#   number.times do
+#     post.likes.create(user: User.all.to_a.sample)
+#   end
+# end
 
-wisc.posts.each do |post|
-  likes_count = rand(100)
-  create_likes(post, likes_count)
-end
+# wisc.posts.each do |post|
+#   likes_count = rand(100)
+#   create_likes(post, likes_count)
+# end
