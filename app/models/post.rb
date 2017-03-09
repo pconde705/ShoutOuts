@@ -2,7 +2,6 @@ class Post < ApplicationRecord
   include PgSearch
   pg_search_scope :search_by_content, against: [ :id, :content ]
 
-
   before_validation :define_SO_ASO
 
   belongs_to :school
