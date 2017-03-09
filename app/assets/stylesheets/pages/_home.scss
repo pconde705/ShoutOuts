@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .banner {
   color: white;
   text-align: center;
@@ -68,7 +73,8 @@
   input {
     max-width: 91%;
   }
-  margin-bottom: 20px
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .media-aside {
@@ -111,6 +117,7 @@ body {
 }
 
 .school-name {
+  height: 10vh;
   margin-top: 71px;
   padding: 16px 0px;
 }
@@ -191,6 +198,7 @@ hr {
 }
 
 
+
 .pic-width {
   width: 100%
 }
@@ -220,4 +228,33 @@ hr {
   border: 1px solid #693569;
 }
 
+.form-size-empty {
+  height: 40vh;
+}
 
+.absolute-position {
+  min-height: calc(100vh - 70px);
+  margin-bottom: -50px;
+  top: 71px;
+  position: absolute;
+  width: 100vw;
+}
+
+.relative-position {
+  position: relative;
+  top: 40vh;
+  z-index: 5;
+}
+
+#posts {
+  margin-bottom: 5em;
+}
+
+.dark-background:empty {
+  position: fixed;
+  background: rgba(33, 17, 17,0.5) !important;
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  z-index: 2;
+}
