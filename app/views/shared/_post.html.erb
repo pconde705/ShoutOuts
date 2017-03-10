@@ -3,7 +3,7 @@
   <% if post.flags.empty? || post.approved %>
   <div class="id-badge">
   <%= social_share_button_tag([post.id, post.content]) %>
-    <p><span class="the-id">#<%= post.id %></span> <i class="fa fa-calendar" aria-hidden="true"> </i> <span class="the-dates"><%= post.created_at.strftime("%A - %b %m, %Y | %I:%M %p ") %></span></p>
+    <p><span class="the-id">#<%= post.id %></span> <i class="fa fa-calendar" aria-hidden="true"> </i> <span class="the-dates"><%= post.created_at.strftime("%A - %b %e, %Y | %I:%M %p ") %></span></p>
   </div>
     <p class="main-content"><%= emojify(post.content) %></p>
 <hr>
