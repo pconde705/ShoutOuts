@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    raise
     @post = current_user.posts.create(post_params)
     # @post = Post.new
     # @post.save
