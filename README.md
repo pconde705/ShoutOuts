@@ -1,18 +1,18 @@
-<h1 align="center"> WellSpring </h1> <br>
+<h1 align="center"> ShoutOuts </h1> <br>
 <p align="center">
-  <a href="https://wellspring-pconde705.herokuapp.com">
-    <img alt="WellSpring" title="WellSpring" src="https://res.cloudinary.com/lopopoa2/image/upload/v1512163320/Screen_Shot_2017-12-01_at_1.20.09_PM_rdmyl1.png" >
+  <a href="https://shoutouts-pconde705.herokuapp.com">
+    <img alt="ShoutOuts" title="ShoutOuts" src="https://res.cloudinary.com/lopopoa2/image/upload/v1515374273/Screen_Shot_2018-01-07_at_5.03.04_PM_pzsbqj.png" >
   </a>
 </p>
 
 <p align="center">
-  Welcome to ShoutOuts, a web application with a jQuery/Bootstrap frontend and Ruby on Rails backend.
+  Welcome to ShoutOuts, a web application with jQuery/Bootstrap frontend and Ruby on Rails backend.
 </p>
 
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Project Creation](#project-creation)
+- [ShoutOut Feed](#shoutout-feed)
 - [Project Rewards](#project-rewards)
 - [Project Show](#project-show)
 - [Search](#search)
@@ -33,13 +33,13 @@ Features:
 * Write a SO or Anti-ShoutOut (ASO)
 * Search for any existing SO by id or content
 
-## Project Creation
+## ShoutOut Feed
 
 <p align="center">
-  <img src="https://res.cloudinary.com/lopopoa2/image/upload/v1512164907/Screen_Shot_2017-12-01_at_1.47.43_PM_wcccae.png">
+  <img src="https://res.cloudinary.com/lopopoa2/image/upload/v1515374267/Screen_Shot_2018-01-07_at_5.04.29_PM_mgphai.png">
 </p>
 
-To create a project simply click on the button in the navbar that will always be available allowing for ease of access. Upon completion of each input field the form will redirect you to your project page that you just created. Everything you need to start a project is on that one page further emphasizing ease of usability. The description input field can be made bigger by a simple click-and-drag action.
+Once logged in, you can scroll to see all the posts made by your fellow students. Each post carries a specific id, and date and time when it was created, a like counter (heart), a flag button which can be removed if an administrator deems it non-offensive, and social media links for sharing across platforms.
 
 ## Project Rewards
 
