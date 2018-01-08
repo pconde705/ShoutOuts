@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Welcome to WellSpring, a Kickstarter inspired single-page application with a React/Redux frontend and Ruby on Rails backend.
+  Welcome to ShoutOuts, a web application with a jQuery/Bootstrap frontend and Ruby on Rails backend.
 </p>
 
 ## Table of Contents
@@ -22,19 +22,16 @@
 
 ## Introduction
 
-In [WellSpring](https://wellspring-pconde705.herokuapp.com) users can sign up for an account, which allows them to create and back any project of their choice. To back a project they can either type in an amount of their choice or they can choose a fixed amount pledge that comes with a reward that the project creator has specified.
+In [ShoutOuts](https://shoutouts-pconde705.herokuapp.com) users can sign up for an account with their school email, which allows them to navigate their school specific ShoutOut page. There, they can write or read posts written by other students. Students can like each others posts, and see which posts currently rank as the most popular. Each post is in the form of a shoutout to someone or something, so you can navigate between the more positive SO posts, and more negative ASO posts.
 
 Features:
 
-* View project feed
-* Navigate feed based on the project category
-* View a project individually
-* Monitor the progress of each project as it attempts to reach its funding goals
-* Create projects
-* Create rewards for those projects
-* Back a project through a reward or amount of your choice
-* See live stats of projects that become funded
-* Search for any existing project
+* View ShoutOut feed
+* Navigate feed based on different categories
+* Flag a ShoutOut for being inappropriate
+* Like a ShoutOut
+* Write a SO or Anti-ShoutOut (ASO)
+* Search for any existing SO by id or content
 
 ## Project Creation
 
