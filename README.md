@@ -1,7 +1,7 @@
 <h1 align="center"> ShoutOuts </h1> <br>
 <p align="center">
   <a href="https://shoutouts-pconde705.herokuapp.com">
-    <img alt="ShoutOuts" title="ShoutOuts" src="https://res.cloudinary.com/lopopoa2/image/upload/v1515374273/Screen_Shot_2018-01-07_at_5.03.04_PM_pzsbqj.png" >
+    <img alt="ShoutOuts" title="ShoutOuts" src="https://res.cloudinary.com/lopopoa2/image/upload/v1515379238/Screen_Shot_2018-01-07_at_6.40.22_PM_ofbzub.png" >
   </a>
 </p>
 
@@ -13,11 +13,8 @@
 
 - [Introduction](#introduction)
 - [ShoutOut Feed](#shoutout-feed)
-- [Project Rewards](#project-rewards)
-- [Project Show](#project-show)
 - [Search](#search)
 - [Categories](#categories)
-- [Stats](#stats)
 
 
 ## Introduction
