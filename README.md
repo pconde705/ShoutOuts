@@ -36,7 +36,7 @@ Features:
   <img src="https://res.cloudinary.com/lopopoa2/image/upload/v1515374267/Screen_Shot_2018-01-07_at_5.04.29_PM_mgphai.png">
 </p>
 
-Once logged in, you can scroll to see all the posts made by your fellow students. Each post carries a specific id, and date and time when it was created, a like counter (heart), a flag button which can be removed if an administrator deems it non-offensive, and social media links for sharing across platforms.
+Once logged in, you can scroll to see all the posts made by your fellow students. Each post carries a specific id, and date and time when it was created, a like counter (heart), a flag button which can be removed if an administrator deems it non-offensive, and social media links for sharing across platforms. 
 
 ## Search
 
