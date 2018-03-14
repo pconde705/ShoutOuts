@@ -11,7 +11,7 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+- [Introduction](#introduction) 
 - [ShoutOut Feed](#shoutout-feed)
 - [Search](#search)
 - [Categories](#categories)
