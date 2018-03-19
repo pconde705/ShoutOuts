@@ -7,7 +7,7 @@
 
 <p align="center">
   Welcome to ShoutOuts, a web application with jQuery/Bootstrap frontend and Ruby on Rails backend.
-</p>
+</p> 
 
 ## Table of Contents
 
